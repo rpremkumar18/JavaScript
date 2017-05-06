@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Calculator</title>
+		<script>
+			var a,b,c;
+			
+			function addbtn(){
+				a = Number(document.getElementById("avalue").value);
+				b = Number(document.getElementById("bvalue").value);
+				c = a+b;
+				console.log("Sum of two value is : " + c);				
+			};
+			function subbtn(){
+				a = Number(document.getElementById("avalue").value);
+				b = Number(document.getElementById("bvalue").value);
+				c = a-b;
+				console.log("Sub of two value is : " + c);				
+			};
+			function mulbtn(){
+				a = Number(document.getElementById("avalue").value);
+				b = Number(document.getElementById("bvalue").value);
+				c = a*b;
+				console.log("MUL of two value is : " + c);				
+			};
+			function divbtn(){
+				a = Number(document.getElementById("avalue").value);
+				b = Number(document.getElementById("bvalue").value);
+				c = a/b;
+				console.log("DIV of two value is : " + c);				
+			};
+			function modbtn(){
+				a = Number(document.getElementById("avalue").value);
+				b = Number(document.getElementById("bvalue").value);
+				c = a%b;
+				console.log("MOD of two value is : " + c);				
+			};
+		</script>
+	</head>
+	<body>
+		<h1>Calculator</h1>
+		<label>Enter The A Value : </label>
+		<input placeholder="Enter The A Value" id="avalue"/></br></br>
+		<label>Enter The B Value : </label>
+		<input placeholder="Enter The B Value" id="bvalue"/></br></br>
+		<button id="addbtn" onclick="addbtn()" type="submit">ADD</button>
+		<button id="subbtn" onclick="subbtn()" type="submit">SUB</button>
+		<button id="mulbtn" onclick="mulbtn()" type="submit">MUL</button>
+		<button id="divbtn" onclick="divbtn()" type="submit">DIV</button>		
+		<button id="modbtn" onclick="modbtn()" type="submit">MOD</button>		
+	</body>
+</html>
