@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Calculator</title>
+		<script>
+			var a,b,c,d;
+			function valueasin(){
+				a = document.getElementById("avalue").value;
+				b = document.getElementById("bvalue").value;
+				c = document.getElementById("operator").value;
+			}
+			function submit(){
+				valueasin();
+			switch (c)
+            {
+               case "+": 
+				d=(parseInt(a)+parseInt(b));
+			    console.log("The Result Value is :" + d);
+               break;
+            
+               case "-": 
+				d=(parseInt(a)-parseInt(b));
+			    console.log("The Result Value is :" + d);
+               break;
+			   
+			   case "*": 
+				d=(parseInt(a)*parseInt(b));
+			    console.log("The Result Value is :" + d);
+               break;
+			   
+			   case "/": 
+				d=(parseInt(a)/parseInt(b));
+			    console.log("The Result Value is :" + d);
+               break;
+			   case "%": 
+				d=(parseInt(a)%parseInt(b));
+			    console.log("The Result Value is :" + d);
+               break;
+			
+               default: 
+				console.log("Enter the corret value");
+			   }
+			}
+		</script>
+	</head>
+	<body>
+		<h1>CALCULATOR</h1>
+		<label>Enter The A Value : </label>
+		<input placeholder="Enter The A Value" id="avalue"/></br></br>
+		<label>Enter The Symbul : </label>
+		<input placeholder="ex: + or - or % or /" id="operator"/></br></br>
+		<label>Enter The B Value : </label>
+		<input placeholder="Enter The B Value" id="bvalue"/></br></br>
+		<button id="submit" onclick="submit()" type="submit">Result</button>
+		<!-- 
+		<button id="addbtn" onclick="addbtn()" type="submit">ADD</button>
+		<button id="subbtn" onclick="subbtn()" type="submit">SUB</button>
+		<button id="mulbtn" onclick="mulbtn()" type="submit">MUL</button>
+		<button id="divbtn" onclick="divbtn()" type="submit">DIV</button>		
+		<button id="modbtn" onclick="modbtn()" type="submit">MOD</button>
+		-->		
+	</body>
+</html>
