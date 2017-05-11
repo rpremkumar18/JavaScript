@@ -2,22 +2,7 @@
 <html>
 	<head>
 		<title>Calculator</title>
-		<script>
-			function addbtn(a,b){
-				return (parseInt(a)+parseInt(b));
-				};
-			function subbtn(a,b){
-				return (parseInt(a)-parseInt(b));
-				};
-			function mulbtn(a,b){
-				return (parseInt(a)*parseInt(b));	
-				};
-			function divbtn(a,b){
-				return (parseInt(a)/parseInt(b));	
-				};
-			function modbtn(a,b){
-				return (parseInt(a)%parseInt(b));
-				};
+	<script>
 			function submit(){
 				var a,b,c,d;
 				a = document.getElementById("avalue").value;
@@ -26,29 +11,29 @@
 			switch (c)
             {
                case "+": 
-				d=addbtn(a,b);
+				d=(parseInt(a)+parseInt(b));
                break;
             
                case "-": 
-				d= subbtn(a,b);
+				d= (parseInt(a)-parseInt(b));
                break;
 			   
 			   case "*": 
-				d= mulbtn(a,b);
+				d= (parseInt(a)*parseInt(b));
                break;
 			   
 			   case "/": 
-				d= divbtn(a,b);
+				d= (parseInt(a)/parseInt(b));
                break;
 			   case "%": 
-				d= modbtn(a,b);
+				d= (parseInt(a)%parseInt(b));
                break;
 			
                default: 
 				console.log("Enter the corret value");
 			   }
 				
-			console.log("The Result Value is :" + d);
+			return console.log("The Result Value is :" + d);
 			}
 		</script>
 	</head>
