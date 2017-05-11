@@ -2,38 +2,56 @@
 <html>
 	<head>
 		<title>Calculator</title>
-	<script>
+		<script>
+			function valueasin(){
+				window.a = document.getElementById("avalue").value;
+				window.b = document.getElementById("bvalue").value;
+				window.c = document.getElementById("operator").value;
+				}
+			function addbtn(a,b){
+				return (parseInt(a)+parseInt(b));
+				};
+			function subbtn(a,b){
+				return (parseInt(a)-parseInt(b));
+				};
+			function mulbtn(a,b){
+				return (parseInt(a)*parseInt(b));	
+				};
+			function divbtn(a,b){
+				return (parseInt(a)/parseInt(b));	
+				};
+			function modbtn(a,b){
+				return (parseInt(a)%parseInt(b));
+				};
 			function submit(){
 				var a,b,c,d;
-				a = document.getElementById("avalue").value;
-				b = document.getElementById("bvalue").value;
-				c = document.getElementById("operator").value;
+				valueasin();
 			switch (c)
             {
                case "+": 
-				d=(parseInt(a)+parseInt(b));
+				d=addbtn(a,b);
                break;
             
                case "-": 
-				d= (parseInt(a)-parseInt(b));
+				d= subbtn(a,b);
                break;
 			   
 			   case "*": 
-				d= (parseInt(a)*parseInt(b));
+				d= mulbtn(a,b);
                break;
 			   
 			   case "/": 
-				d= (parseInt(a)/parseInt(b));
+				d= divbtn(a,b);
                break;
 			   case "%": 
-				d= (parseInt(a)%parseInt(b));
+				d= modbtn(a,b);
                break;
 			
                default: 
 				console.log("Enter the corret value");
 			   }
 				
-			return console.log("The Result Value is :" + d);
+			console.log("The Result Value is :" + d);
 			}
 		</script>
 	</head>
@@ -46,5 +64,12 @@
 		<label>Enter The B Value : </label>
 		<input placeholder="Enter The B Value" id="bvalue"/></br></br>
 		<button id="submit" onclick="submit()" type="submit">Result</button>
+		<!-- 
+		<button id="addbtn" onclick="addbtn()" type="submit">ADD</button>
+		<button id="subbtn" onclick="subbtn()" type="submit">SUB</button>
+		<button id="mulbtn" onclick="mulbtn()" type="submit">MUL</button>
+		<button id="divbtn" onclick="divbtn()" type="submit">DIV</button>		
+		<button id="modbtn" onclick="modbtn()" type="submit">MOD</button>
+		-->		
 	</body>
 </html>
