@@ -3,10 +3,11 @@
 	<head>
 		<title>Calculator</title>
 		<script>
-			function valueasin(){
+			var values=function valueasin(){
 				a = document.getElementById("avalue").value;
 				b = document.getElementById("bvalue").value;
 				c = document.getElementById("operator").value;
+				return values;
 				}
 			function addbtn(a,b){
 				return (parseInt(a)+parseInt(b));
@@ -24,8 +25,7 @@
 				return (parseInt(a)%parseInt(b));
 				};
 			function submit(){
-				var a,b,c,d;
-				valueasin();
+				values();
 			switch (c)
             {
                case "+": 
